@@ -131,6 +131,22 @@ public class Calculatrice extends Frame {
 	private void calcul() {
 		// A COMPLETER : effectuer les operations de calcul et 
 		// afficher le resultat dans ecran.
+		double chiffre2 = Double.valueOf(ecran.getText());
+		switch (operateur){
+			case "+":
+				chiffre1 += chiffre2;
+				break;
+			case "-":
+				chiffre1 -= chiffre2;
+				break;
+			case "*":
+				chiffre1 *= chiffre2;
+				break;
+			case "/":
+				chiffre1 /= chiffre2;
+				break;
+		}
+		ecran.setText(String.valueOf(chiffre1));
 	}
 	
 	class ChiffreListener implements ActionListener {
@@ -184,7 +200,7 @@ public class Calculatrice extends Frame {
 			if (clicOperateur) {
 				calcul();
 				ecran.setText(String.valueOf(chiffre1));
-			} else {
+			} else { // on rentre dans le else si on a entré seulement le premier élément d'une operation, ainsi quand on aura tape le deuxieme et qu'on tapera un autre opérateur, clicOperateur sera sur true.
 				chiffre1 = Double.valueOf(ecran.getText()).doubleValue();
 				clicOperateur = true;
 			}
