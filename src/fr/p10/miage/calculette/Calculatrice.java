@@ -146,7 +146,7 @@ public class Calculatrice extends Frame {
 				chiffre1 /= chiffre2;
 				break;
 		}
-		ecran.setText(String.valueOf(chiffre1));
+		ecran.setText(String.valueOf(chiffre1));//test
 	}
 	
 	class ChiffreListener implements ActionListener {
