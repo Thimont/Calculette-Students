@@ -3,9 +3,6 @@ package sphere.controller;
 import sphere.model.Sphere;
 import sphere.view.SphereWindow;
 
-
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.TextEvent;
 import java.awt.event.TextListener;
 import java.text.DecimalFormat;

@@ -3,9 +3,7 @@ package sphere.view;
 import sphere.controller.SphereController;
 
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 import java.awt.*;
-import java.awt.event.ActionListener;
 
 /**
  * Created by flthiebl on 12/11/2015.
