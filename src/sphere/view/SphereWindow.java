@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  */
 public class SphereWindow extends JFrame {
     JPanel panneau = new JPanel(new GridLayout(3,2,10,10));
-    JLabel lRadius = new JLabel("Radius = ");
+    JLabel lRadius = new JLabel("Radius  = ");
     JLabel lVolume = new JLabel("Volume = ");
     JLabel lSurface = new JLabel("Surface area = ");
     TextField champsRadius;
