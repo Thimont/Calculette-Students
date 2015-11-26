@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
  * Created by flthiebl on 12/11/2015.
  */
 public class SphereWindow extends JFrame {
-    JPanel panneau = new JPanel(new GridLayout(3,2));
+    JPanel panneau = new JPanel(new GridLayout(3,2,10,10));
     JLabel lRadius = new JLabel("Radius = ");
     JLabel lVolume = new JLabel("Volume = ");
     JLabel lSurface = new JLabel("Surface area = ");
@@ -22,6 +22,7 @@ public class SphereWindow extends JFrame {
     public SphereWindow(){
         Dimension dim = new Dimension(100, 20);
         champsRadius = new TextField("0");
+        champsRadius.setBackground(Color.YELLOW);
         champsRadius.setPreferredSize(dim);
         champsVolume = new JTextField();
         champsVolume.setPreferredSize(dim);

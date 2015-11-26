@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.TextEvent;
 import java.awt.event.TextListener;
+import java.text.DecimalFormat;
 
 
 /**
@@ -17,8 +18,8 @@ public class SphereController implements TextListener {
 
     SphereWindow sphereWindow;
     Sphere sphere;
-    double surface;
-    double volume;
+    String s_surface;
+    String s_volume;
 
     public SphereController(SphereWindow sphereWindow) {
         this.sphereWindow = sphereWindow;
@@ -28,11 +29,13 @@ public class SphereController implements TextListener {
 
     @Override
     public void textValueChanged(TextEvent e) {
+        DecimalFormat f = new DecimalFormat();
+        f.setMaximumFractionDigits(2);
         sphere = new Sphere(sphereWindow.getRayon());
-        volume = sphere.getVolume();
-        surface = sphere.getSurface();
+        s_volume = f.format(sphere.getVolume());
+        s_surface = f.format(sphere.getSurface());
 
-        sphereWindow.champsVolume.setText(String.valueOf(volume));
-        sphereWindow.champsSurface.setText(String.valueOf(surface));
+        sphereWindow.champsVolume.setText(s_volume);
+        sphereWindow.champsSurface.setText(s_surface);
     }
 }
